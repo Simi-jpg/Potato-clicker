@@ -1,0 +1,247 @@
+/* Style for the container of building and upgrade buttons. */
+body {
+
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f9;
+	color:  #333;
+
+}
+
+.image-button-container {
+    display: flex;  /*displays buttons in a row*/
+	flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff; /* Button background */
+    padding: 10px; /* Padding for space on the right-hand side of the button. Will be used for text. */
+    border: 2px solid black; /* Adding a border */
+    border-radius: 5px; /* Rounding the corners of the border */
+    cursor: pointer;
+	width: 180px;
+	max-width: 100%;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.image-button-container:hover {
+	transform: translateY(-10px);
+	border-color: #4f46e5;
+  }
+.grids-wrapper {
+
+	display: flex;
+	flex-wrap: nowrap;
+
+	gap: 10px;
+	padding: 30px 15px;
+	overflow-x:  auto;
+	
+}
+
+/* Layout */
+.main-container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height:  100vh;
+}
+
+/*Left side of the screen will be the potato that is clickable*/
+.potato { 
+
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: rgb(255, 255, 255);
+	text-align:  center;
+
+}
+
+/* Middle section of the screen will be the stats, messages and achievements */
+.middle-section {
+	width: 50%;
+	overflow-x: auto;
+}
+
+/* Style for the Big Potato Button */
+.image-bigPotato {
+    width: 200px;
+	max-width: 600px;
+    height: auto;
+
+}
+
+
+.image-bigPotato:hover {
+	transform: translateY(-10px);
+	border-color: #4f46e5;
+
+  }
+
+/* Style for the image buttons (buildings and upgrades) */
+.image-button {
+    width: 80px;
+    height: auto;
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* Style for the text appearing to the right of the image buttons. */
+.button-text {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Style for the Counter */
+.counter-text {
+	color: #0066cc;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: fantasy;
+	margin: 10px 0;
+
+}
+
+/* Style for a grid layout used to place buttons */
+.grid-container {
+
+
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px; /* Space between grid items */
+
+	justify-items: center;
+	width: 100%;
+	max-width: 500px;
+}
+
+/* To hide a button */
+.hidden {
+	display: none;
+}
+/* Style for a glowing button */
+.glowing {
+
+	animation: glow 10s ease-in-out forwards;
+}
+
+@keyframes glow {
+	
+	0% {
+		box-shadow: 0 0 30px 15px rgba(236, 229, 1, 0.842);
+		opacity: 1;
+
+	}
+	50% {
+		box-shadow: 0 0 20px 10px rgba(225, 218, 14, 0.842);
+		opacity: 1;
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(162, 171, 4, 0.282);
+		opacity: 0;
+	}
+}
+
+/* Style for a bonus button */
+.image-bonus {
+    position: absolute;
+	width: 100px;
+	height: auto;
+    top: 300px;
+    left: 300px;
+    z-index: 10; /* To bring the image to the front */
+}
+
+/* Style for a regular message */
+.message {
+	background-color: #adbdf7;  /* Light blue */
+	padding: 10px;
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 200px;
+	left: 200px;
+	z-index: 5; /* To bring the text to the front */
+	border-radius: 5px;
+	font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for an achievement message */
+.achievement {
+
+	background-color: #ffe98f;  /* Yellow-Gold */
+	padding: 10px;
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 200px;
+	left: 500px;
+	z-index: 5; /* To bring the text to the front */
+	border-radius: 5px;
+	font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for a statistics button */
+#statisticsButton {
+
+	margin: 10px, auto;
+	padding: 8px 16px;
+	font-size: 16px;
+	display:  block;
+	font-weight: bold;
+	background-color: #4f46e5;
+	border: 2px solid rgb(215, 203, 207);
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+/* Style for a statistics panel */
+.stats-panel {
+
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 300px;
+	background-color: rgb(235, 238, 232);
+	border: 2px solid #4f46e5;
+	border-radius: 10px;
+	padding: 20px;
+	z-index: 15;
+	font-family: fantasy;
+	text-align: center;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+/* Style for a message slide*/
+.message {
+
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #1f33b1; 
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 15px;
+    font-weight: bold;
+	text-align: center;
+	z-index: 100;
+}
+/* Style for a message slide when it's hidden */
+.message.hidden {
+	display: none;
+}
+/* Style for a message slide's paragraph */
+.message p {
+	margin: 0;
+}
+
+
