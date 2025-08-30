@@ -1,7 +1,5 @@
 /**
  * AUTHOR: Simi Adeniyi
- * CLASS: Comp 2150 A01
- * ASSIGNMENT: 4
  * 
  * REMARKS: This handles all the game logic surrounding the potato counter and the pps rate
  */
