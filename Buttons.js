@@ -1,7 +1,5 @@
 /**
  * AUTHOR: Simi Adeniyi
- * CLASS: Comp 2150 A01
- * ASSIGNMENT: 4
  * 
  * REMARKS: This contains all different types of buttons and their respective actions
  */
